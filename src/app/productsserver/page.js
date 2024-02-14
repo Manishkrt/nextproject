@@ -1,4 +1,5 @@
 import Link from "next/link"; 
+import Image from 'next/image';
 
 async function productList(){
     const response = await fetch('https://dummyjson.com/products') 
@@ -20,12 +21,12 @@ const page = async() => {
                         return(
                             <tr key={productValue.id}>
                                 <td>{productValue.title}</td>
-                                <td><img src={productValue.thumbnail} alt="" style={{width:"120px"}}/></td>
+                                <td><Image src={productValue.thumbnail} alt="" style={{width:"120px"}}/></td>
                                 <td><Link href={`/productsserver/${productValue.title}/${productValue.id}`}>Open</Link></td>
                             </tr>
                         )
                     })}
-                </tbody>
+                </tbody> 
             </table>
         </div>
     </>
