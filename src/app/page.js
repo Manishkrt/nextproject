@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default async function Home() {
   const newsData = ["news1", "news2", "news3", "news4", "news5"] 
-  await generateMetadata()
+  generateMetadata()
   return (
     <main >
        home
@@ -23,7 +23,7 @@ export default async function Home() {
   );
 }
 
-export async function generateMetadata(props){
+export  function generateMetadata(props){
   return{
       title:"home", 
       description: "this is description",
