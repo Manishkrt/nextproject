@@ -7,8 +7,7 @@ const page = () => {
     const fetchData = async()=>{
         const response = await fetch('https://dummyjson.com/products') 
         const responseJson = await response.json() 
-        const {products} = responseJson
-        console.log("products", products);
+        const {products} = responseJson 
         setProductData(products)
     }
     useEffect(()=>{
