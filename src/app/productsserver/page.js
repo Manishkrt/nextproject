@@ -22,7 +22,7 @@ const page = async() => {
                             <tr key={productValue.id}>
                                 <td>{productValue.title}</td>
                                 <td><img src={productValue.thumbnail} alt="hello" style={{width: "120px"}}/></td>
-                                <td><Link href={`/productsserver/${productValue.title}/${productValue.id}`}>Open</Link></td>
+                                <td><Link href={`/productsserver/${productValue.id}`}>Open</Link></td>
                             </tr>
                         )
                     })}
