@@ -6,7 +6,7 @@ export default async function Home() {
   generateMetadata()
   return (
     <main >
-       home
+       home new
        <ul>
         {newsData.map((val, i)=>{
           return(
